@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft--Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url(./img/bg-mobile.svg) no-repeat fixed;
+  background-size: contain;
+  background-color: var(--Violet);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+main {
+  padding: 1rem;
+}
+
+#logo {
+  width: 100px;
+  max-width: 200px;
+  margin: 0.7rem 0 2rem;
+}
+
+#mobile {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+}
+
+#info {
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    max-width: 20ch;
+    margin-inline: auto;
+  }
+
+  p {
+    max-width: 50ch;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.6em 6em;
+    color: var(--Violet);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--Soft--Magenta);
+    }
+  }
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+
+  img {
+    outline: 1.5px solid #fff;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 4px;
+    height: 20px;
+    cursor: pointer;
+    transition: outline 0.3s ease-in-out, scale 0.2s ease-in-out;
+
+    &:hover {
+      outline-color: var(--Soft--Magenta);
+      scale: 1.02;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background: url(./img/bg-desktop.svg) no-repeat top left;
+    background-size: fill;
+    background-color: var(--Violet);
+  }
+
+  #logo {
+    width: 150px;
+  }
+
+  #info {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.3rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  #icons {
+    gap: 1.2rem;
+    img {
+      height: 25px;
+    }
+  }
+}
+
+@media (min-width: 965px) {
+  main {
+    margin-left: 2rem;
+  }
+
+  #logo {
+    width: 200px;
+  }
+
+  #wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #info {
+    text-align: left;
+
+    h1,
+    p {
+      margin-inline: unset;
+    }
+  }
+
+  #icons {
+    justify-content: right;
+    margin-right: 2rem;
+  }
+}
