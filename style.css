@@ -79,6 +79,7 @@ main {
     color: var(--Violet);
     font-weight: 400;
     margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
@@ -166,6 +167,11 @@ main {
     h1,
     p {
       margin-inline: unset;
+    }
+
+    button {
+      padding: 0.6em 3em;
+      border-radius: 25px;
     }
   }
 
